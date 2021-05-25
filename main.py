@@ -12,7 +12,7 @@ r = lambda: random.randint(0, 255)
 color = '#%02X%02X%02X' % (r(), r(), r())
 # client connections
 PORT = 5000
-SERVER = "192.168.1.5"
+SERVER = "YOUR IPV4"
 ADDRESS = (SERVER, PORT)
 FORMAT = "utf-8"
 
@@ -208,7 +208,7 @@ class GUI:
 
     def play_sound(self):
         pygame.mixer.init()
-        crash_sound = pygame.mixer.Sound("insight-578.mp3")
+        crash_sound = pygame.mixer.Sound("THE PATH WHERE YOU HAVE STORED THE SOUND FILE")
         crash_sound.play()
 
     def setting_window(self):
@@ -253,3 +253,4 @@ class GUI:
 
 
 g = GUI()
+

@@ -4,7 +4,7 @@ import threading
 
 PORT = 5000
 
-SERVER = "192.168.1.5"
+SERVER = "YOUR IPV4"
 
 ADDRESS = (SERVER, PORT)
 
