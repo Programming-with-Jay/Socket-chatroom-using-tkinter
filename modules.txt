@@ -1,0 +1,6 @@
+socket
+threading
+tkinter
+random
+csv
+pygame
