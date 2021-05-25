@@ -14,7 +14,7 @@ r = lambda: random.randint(0,255)
 color='#%02X%02X%02X' % (r(),r(),r())
 #client connections
 PORT = 5000
-SERVER = "192.168.1.5"
+SERVER = "YOUR IPV4"
 ADDRESS = (SERVER, PORT)
 FORMAT = "utf-8"
 
