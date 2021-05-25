@@ -12,7 +12,7 @@ r = lambda: random.randint(0, 255)
 color = '#%02X%02X%02X' % (r(), r(), r())
 # client connections
 PORT = 5000
-SERVER = "YOUR IPV4"
+SERVER = socket.gethostbyname(socket.gethostname())
 ADDRESS = (SERVER, PORT)
 FORMAT = "utf-8"
 
@@ -112,7 +112,7 @@ class GUI:
                              font="Helvetica 13 bold",
                              pady=5)
         self.heading.pack()
-        self.photo = PhotoImage(file=r"black-settings-button.png")
+        self.photo = PhotoImage(file=r"assets/black-settings-button.png")
         self.settings_button = Button(self.root, image=self.photo, pady=5, command=self.setting_window)
         self.settings_button.place(relx=0.9, rely=0.02)
         self.space_for_message = Text(self.root,
@@ -171,6 +171,12 @@ class GUI:
         self.snd.start()
 
     def message_from_server(self):
+        """
+        <summary>
+        it decodes the string from the server.
+        </summary>
+        :return:None
+        """
         while True:
             try:
                 message = client.recv(1024).decode(FORMAT)
@@ -185,18 +191,31 @@ class GUI:
 
 
             except:
-                print("An error occured!")
+                print("An error has occured from the server.")
                 client.close()
                 break
 
     def message_to_server(self):
+        """
+        <summary>
+        it decodes the messages to server.
+        </summary>
+        :return: None
+        """
         self.space_for_message.config(state=DISABLED)
         while True:
             message = (f"{self.user_name}: {self.msg}")
             client.send(message.encode(FORMAT))
             break
 
+
     def update_database(self):
+        """
+        <summary>
+        it updates the database or the data to a .txt file and saves the message.
+        </summary>
+        :return: None
+        """
         try:
             rowlist = [[self.user_name, self.msg]]
             with open('database.csv', 'a', newline='') as file:
@@ -204,14 +223,20 @@ class GUI:
                 writer.writerows(rowlist)
                 self.play_sound()
         except:
-            print("Error occured")
+            print("Error occured in database ")
 
     def play_sound(self):
+        """
+        <summary>
+        it plays a sound when a message is sent or received.
+        :return: None
+        """
         pygame.mixer.init()
-        crash_sound = pygame.mixer.Sound("THE PATH WHERE YOU HAVE STORED THE SOUND FILE")
+        crash_sound = pygame.mixer.Sound("assets/insight-578.mp3")
         crash_sound.play()
 
     def setting_window(self):
+
         self.settings = Tk()
         self.settings.geometry('250x250')
         Label(self.settings, text="COLOR").pack()
