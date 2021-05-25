@@ -19,6 +19,8 @@ So over here you need to provide a name and then click on CONTINUE button
 
 [![Untitled-design-1.png](https://i.postimg.cc/X78SkRMS/Untitled-design-1.png)](https://postimg.cc/RNNDMbVX)
 
+After this you will enter the chatroom
+
 
 
 
