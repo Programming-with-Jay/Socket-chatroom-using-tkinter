@@ -160,7 +160,7 @@ class GUI:
             print("Error occured")
     def play_sound(self):
         pygame.mixer.init()
-        crash_sound = pygame.mixer.Sound("insight-578.mp3")
+        crash_sound = pygame.mixer.Sound("THE PATH WHERE YOU HAVE STORED THE SOUND FILE")
         crash_sound.play()
     def setting_window(self):
         self.settings=Tk()
