@@ -13,7 +13,7 @@ So to run this you can run the server.py file in your IDE or in CMD and run the 
 
 So after running main.py you will be able to see an interface like this
 
-[![interface.png](https://i.postimg.cc/CKShxhHt/interface.png)](https://postimg.cc/Xr1S20Pc)
+[![Untitled-design-1.png](https://i.postimg.cc/X78SkRMS/Untitled-design-1.png)](https://postimg.cc/RNNDMbVX)
 
 So over here you need to provide a name and then click on CONTINUE button 
 
