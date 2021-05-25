@@ -12,8 +12,6 @@ FORMAT = "utf-8"
 
 clients, names = [], []
 
-# Create a new socket for
-# the server
 server = socket.socket(socket.AF_INET,
 					socket.SOCK_STREAM)
 server.bind(ADDRESS)
