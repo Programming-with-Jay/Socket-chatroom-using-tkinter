@@ -8,3 +8,13 @@ So to run this you can run the server.py file in your IDE or in CMD and run the 
 
 
 [![interface.png](https://i.postimg.cc/CKShxhHt/interface.png)](https://postimg.cc/Xr1S20Pc)
+
+**************Process*************
+So after running main.py you will be able to see an interface like this
+
+[![interface.png](https://i.postimg.cc/CKShxhHt/interface.png)](https://postimg.cc/Xr1S20Pc)
+
+So over here you need to provide a name and then click on CONTINUE button 
+
+
+
