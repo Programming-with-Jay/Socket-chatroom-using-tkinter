@@ -23,7 +23,7 @@ After this you will enter the chatroom
 
 [![interface.png](https://i.postimg.cc/jdxG8MQp/interface.png)](https://postimg.cc/gr7Sjq7s)
 
-*********8settings*********
+*********settings*********
 So if you want to change the color of the window you can change this by going on to the settings tab on your top right
 
 
