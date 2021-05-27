@@ -8,6 +8,7 @@ import random
 import csv
 import pygame
 
+
 r = lambda: random.randint(0, 255)
 color = '#%02X%02X%02X' % (r(), r(), r())
 # client connections
@@ -42,6 +43,7 @@ class GUI:
     change_color_window()
     </functions>
     """
+
     def __init__(self):
         """ <summary>
             Main Constructor.
@@ -111,7 +113,10 @@ class GUI:
                              font="Helvetica 13 bold",
                              pady=5)
         self.heading.pack()
-        self.photo = PhotoImage(file=r"assets/black-settings-button.png")
+        try:
+            self.photo = PhotoImage(file=r"assets/black-settings-button.png")
+        except IOError as e:
+            print("there is an error, you don't have the assets folder or forgot to change the path.")
         self.settings_button = Button(self.root, image=self.photo, pady=5, command=self.setting_window)
         self.settings_button.place(relx=0.9, rely=0.02)
         self.space_for_message = Text(self.root,
@@ -190,7 +195,7 @@ class GUI:
 
 
             except:
-                print("An error occured!")
+                print("there are some issues while connecting to the server, the client will disconnect soon.")
                 client.close()
                 break
 
@@ -220,8 +225,8 @@ class GUI:
                 writer = csv.writer(file)
                 writer.writerows(rowlist)
                 self.play_sound()
-        except:
-            print("Error occured")
+        except EXCEPTION as exo:
+            print("there are some issues while connecting to the database.")
 
     def play_sound(self):
         """
@@ -230,9 +235,11 @@ class GUI:
         :return: None
         """
         pygame.mixer.init()
-        crash_sound = pygame.mixer.Sound(
-            "C:/Users/Ashish/PycharmProjects/Socket-chatroom-using-tkinter/assets/insight-578.mp3")
-        crash_sound.play()
+        try:
+            self.crash_sound = pygame.mixer.Sound("assets/insight-578.mp3")
+        except IOError as ex:
+            print("there is an error, you have not downloaded the assets folder or forgot to change the path.")
+        self.crash_sound.play()
 
     def setting_window(self):
         """
@@ -288,4 +295,4 @@ class GUI:
         self.heading.configure(bg=color)
 
 
-g = GUI()   # creating the object.
+g = GUI()  # creating the object.
