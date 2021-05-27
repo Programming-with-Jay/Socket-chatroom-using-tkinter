@@ -8,7 +8,7 @@ So to run this you can run the server.py file in your IDE or in CMD and run the 
 
 
 [![interface.png](https://i.postimg.cc/CKShxhHt/interface.png)](https://postimg.cc/Xr1S20Pc)
-
+ 
 **************Process*************
 
 So after running main.py you will be able to see an interface like this
